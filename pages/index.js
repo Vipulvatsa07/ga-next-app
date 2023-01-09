@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// export default function Homepage({data})
-const Homepage=()=>
+export default function Homepage({data})
 {
     return(
         <>
-        {/* <div style={{display:"flex" ,justifyContent:"center"}}>
+        <div style={{display:"flex" ,justifyContent:"center"}}>
             <div >
         <Image src={data.avatar_url} alt="profile" width={200} height={200}/>
         <h1>{data.name}</h1>
@@ -24,21 +23,19 @@ const Homepage=()=>
         <h1>Masai School</h1>
         <h3>Full stack web Developement</h3>
         </div>
-        </div> */}
-        <h1>hello</h1>
+        </div>
         </>
     )
 }
 
 
-// export const getStaticProps=async()=>{
+export const getStaticProps=async()=>{
 
-//     let r=await fetch("https://api.github.com/users/Vipulvatsa07")
-//         r=await r.json();
-//         return{
-//             props:{
-//                 data:r,
-//             }
-//         }
-// }
-export default Homepage
+    let r=await fetch("https://api.github.com/users/Vipulvatsa07")
+        r=await r.json();
+        return{
+            props:{
+                data:r,
+            }
+        }
+}
