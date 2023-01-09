@@ -20,7 +20,7 @@ const Project = ({data}) => {
               <h3>forks:{el.forks_count}</h3>
               <h3>count:{el.size}</h3>
             </div>
-            <h4>Language:{el.language}</h4>
+            <h4>Languages:{el.language}</h4>
             </Link>
             </div> </div>)
 
